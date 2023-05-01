@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0"
+    android:layout_margin="10dp">
+    <TableRow>
+        <TextView
+            android:id="@+id/txtLbl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:text="Total Amount:"/>
+
+        <EditText android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_column="1" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/txtLbl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:text="No. of people:"/>
+
+        <EditText
+            android:id="@+id/txtPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_column="1" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/txtLbl3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Tip percentage: " />
+    </TableRow>
+
+    <TableRow>
+        <RadioGroup android:id="@+id/RadioGroupTips"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:checkedButton="@id/radioFifteen">
+
+            <RadioButton
+                android:id="@+id/radioFifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15%"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/radioTwenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20%"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/radioOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:textSize="15sp"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/txtTipOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_column="1" />
+    </TableRow>
+
+    <TableRow>
+        <LinearLayout
+            android:layout_column="1">
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:textAllCaps="false"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@color/white"/>
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </TableRow>
+    <View
+        android:layout_height="2dp"
+        android:background="@color/purple_500"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <TableRow android:paddingBottom="10dp" android:paddingTop="5dp">
+        <TextView android:id="@+id/txtLbl4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:text="Tip Amount:"/>
+
+        <TextView android:id="@+id/txtTipAmount"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_column="1" />
+    </TableRow>
+
+    <TableRow android:paddingBottom="10dp" android:paddingTop="5dp">
+        <TextView android:id="@+id/txtLbl5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:text="Total To Pay: "/>
+
+        <TextView android:id="@+id/txtTotalToPay"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_column="1" />
+    </TableRow>
+
+    <TableRow android:paddingBottom="10dp" android:paddingTop="5dp">
+        <TextView android:id="@+id/txtLbl6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:text="Total per Person: "/>
+
+        <TextView android:id="@+id/txtTipPerPerson"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_column="1" />
+    </TableRow>
+</TableLayout>
